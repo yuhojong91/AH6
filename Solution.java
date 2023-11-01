@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.xml.transform.Source;
@@ -14,11 +15,20 @@ class Node<T> {
 
 class Solution {
   public static List<String> linkedListValues(Node<String> head) {
-    // todo
-    return;
+    Node<String> temp = head;
+    List<String> linkedList = new ArrayList<>();
+
+    while(temp != null){
+      linkedList.add(temp.val);
+      System.out.println(temp.val);
+      System.out.println(temp.next);
+      temp = temp.next;
+    }
+
+    return linkedList;
   }
 
-  public static void main() {
+  public static void main(String[] linkedList) {
     Node<String> a = new Node<>("a");
     Node<String> b = new Node<>("b");
     Node<String> c = new Node<>("c");
